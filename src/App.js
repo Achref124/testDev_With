@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import usersData from './Data';
+import { Route, Routes } from 'react-router-dom';
+import UserList from './Components/UsersList/UsersList';
+import Details from './Pages/Details/Details';
+import NavB from './Components/NavB/NavB';
 
 function App() {
+  const [users,setUsers]=useState(usersData)
+  console.log(users)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+      <Route path='/' element={<div><NavB users={users} setUsers={setUsers}/><UserList users={users} /></div>} />
+      <Route path='/user/:id' element={<Details users={users} />} />
+      
+      </Routes>
+     
     </div>
   );
 }

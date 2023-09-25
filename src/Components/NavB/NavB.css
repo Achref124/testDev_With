@@ -1,0 +1,141 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: lavender;
+    
+    box-shadow: 10px 10px 15px #cbced1, -10px -10px 20px white;
+  }
+  .logo{
+    width: 50%;
+    margin-left: 10px;
+  }
+  h1{
+    color: green;
+    font-size: 40px;
+  }
+  span{
+    color: orange;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+  }
+  .navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    color: orange;
+    background: 50px;
+    transition: transform 2s;
+  }
+  .navbar a:last-child{
+    background: purple;
+    padding: 3px 10px;
+    border-radius: 40px;
+    font-size: 15px;
+    color: white;
+  }
+  .navbar a:hover{
+    transform: scale(1.5);
+    background: lightblue;
+    color: blue;
+    padding: 3px 10px;
+    border-radius: 40px;
+    font-size: 15px;
+  }
+  .hex-select {
+    position: relative;
+    display: inline-block;
+    
+    cursor: pointer;
+  }
+  .hex-select:after {
+    content: "";
+    width: 0.35rem;
+    height: 0.35rem;
+    display: block;
+    position: absolute;
+    inset: 50% 1rem auto auto;
+    translate: 0 -75% 0;
+    rotate: 0 0 1 45deg;
+    border-right: 0.125rem solid #ddd;
+    border-bottom: 0.125rem solid #ddd;
+  }
+  .hex-select select, .hex-select .custom-select {
+    position: relative;
+    appearance: none;
+    background: #7a8bdd;
+    color: #ddd;
+    font-family: inherit;
+    height: 2.5rem;
+    
+    outline: none;
+    padding: 0 1.5rem;
+    transition: all 0.35s ease-in-out;
+    
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border: 1px solid #222;
+    border-radius: 0.35rem;
+    cursor: pointer;
+  }
+  .hex-select .select-options {
+    position: absolute;
+    inset: 100% 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 0.35rem;
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0;
+    translate: 0 1rem 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    max-height: 250px;
+    overflow-y: auto;
+    transition: 0.35s ease-in-out all;
+  }
+  .hex-select .select-options li {
+    height: 3rem;
+    line-height: 3rem;
+    outline: none;
+    padding: 0 1.5rem;
+    text-transform: none;
+    letter-spacing: 0.025rem;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: 0.35s ease-in-out all;
+  }
+  .hex-select .select-options li:hover {
+    background: #444;
+  }
+  .hex-select:hover select, .hex-select:hover .custom-select {
+    border-color: #444;
+  }
+  .hex-select:hover .select-options {
+    translate: 0 0 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  .button1{
+    width:80px;
+    background-color: #7b90f7;
+    font-size: 0.75rem;
+     font-weight: bold;
+     text-transform: uppercase;
+  }
+  .button2{
+    width:80px;
+    font-size: 0.75rem;
+     font-weight: bold;
+     text-transform: uppercase;
+  }
